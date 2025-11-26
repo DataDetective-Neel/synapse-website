@@ -1042,3 +1042,39 @@ if (document.readyState === 'loading') {
 } else {
     initializeAnalyticsNavigation();
 }
+
+// ========================================
+// PROBABILITY NESTED TABS NAVIGATION
+// ========================================
+
+function initializeProbabilityTabs() {
+    // Get all probability tab buttons and panels
+    const probTabButtons = document.querySelectorAll('.prob-tab-btn');
+    const probTabPanels = document.querySelectorAll('.prob-tab-panel');
+
+    // Handle probability tab navigation
+    probTabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-prob-tab');
+
+            // Update active button
+            probTabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Show target probability panel
+            probTabPanels.forEach(panel => {
+                panel.classList.remove('active');
+                if (panel.id === targetTab) {
+                    panel.classList.add('active');
+                }
+            });
+        });
+    });
+}
+
+// Initialize probability tabs when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeProbabilityTabs);
+} else {
+    initializeProbabilityTabs();
+}

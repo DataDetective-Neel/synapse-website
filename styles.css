@@ -2308,3 +2308,367 @@ footer p {
         padding: 1.5rem;
     }
 }
+
+/* ========================================
+   PROBABILITY NESTED TABS STYLES
+   ======================================== */
+
+.prob-intro {
+    background: linear-gradient(165deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+    border: 1px solid var(--border-gold);
+    border-left: 5px solid var(--gold);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-premium);
+}
+
+.prob-intro h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.75rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+}
+
+.prob-intro h3 i {
+    font-size: 1.5rem;
+}
+
+.prob-intro p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.prob-tabs-container {
+    background: linear-gradient(165deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+    border: 1px solid var(--border-gold);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-deep);
+}
+
+.prob-tabs-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0;
+    background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-card));
+    border-bottom: 2px solid var(--gold);
+    padding: 1rem;
+}
+
+.prob-tab-btn {
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 1.25rem 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.prob-tab-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-gradient);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.prob-tab-btn:hover::before,
+.prob-tab-btn.active::before {
+    transform: scaleX(1);
+}
+
+.prob-tab-btn i {
+    font-size: 1.75rem;
+    color: var(--gold);
+    transition: all 0.3s ease;
+}
+
+.prob-tab-btn span {
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.prob-tab-btn:hover {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(156, 77, 204, 0.1));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-premium);
+}
+
+.prob-tab-btn:hover span {
+    color: var(--text-primary);
+}
+
+.prob-tab-btn:hover i {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+}
+
+.prob-tab-btn.active {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(156, 77, 204, 0.2));
+    box-shadow: var(--glow-gold);
+    transform: translateY(-2px);
+}
+
+.prob-tab-btn.active span {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.prob-tab-btn.active i {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+}
+
+.prob-tabs-content {
+    padding: 3rem;
+    min-height: 400px;
+}
+
+.prob-tab-panel {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.prob-tab-panel.active {
+    display: block;
+}
+
+/* Concept Card */
+.concept-card {
+    background: linear-gradient(165deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    border: 1px solid var(--border-gold);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+}
+
+.concept-header {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(156, 77, 204, 0.15));
+    padding: 2.5rem 3rem;
+    border-bottom: 2px solid var(--gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.concept-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+}
+
+.concept-icon {
+    font-size: 4rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+    position: relative;
+    z-index: 1;
+}
+
+.concept-header h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.concept-tag {
+    background: var(--accent-gradient);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-premium);
+    position: relative;
+    z-index: 1;
+}
+
+.concept-body {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.concept-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--gold);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.concept-section:hover {
+    border-left-width: 6px;
+    border-left-color: var(--gold-light);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);
+    transform: translateX(5px);
+    box-shadow: var(--shadow-premium);
+}
+
+.concept-section h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+}
+
+.concept-section h4 i {
+    font-size: 1.25rem;
+}
+
+.concept-section p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Responsive for Probability Tabs */
+@media (max-width: 1024px) {
+    .prob-tabs-nav {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .prob-tab-btn {
+        padding: 1rem 0.75rem;
+    }
+
+    .prob-tab-btn i {
+        font-size: 1.5rem;
+    }
+
+    .concept-header {
+        padding: 2rem 2rem;
+    }
+
+    .concept-header h3 {
+        font-size: 2rem;
+    }
+
+    .concept-body {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .prob-tabs-nav {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    .prob-tab-btn {
+        padding: 1rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .prob-tab-btn i {
+        font-size: 1.35rem;
+    }
+
+    .prob-tab-btn span {
+        font-size: 0.75rem;
+    }
+
+    .prob-tabs-content {
+        padding: 1.5rem;
+    }
+
+    .concept-header {
+        padding: 1.5rem;
+    }
+
+    .concept-header h3 {
+        font-size: 1.75rem;
+    }
+
+    .concept-icon {
+        font-size: 3rem;
+    }
+
+    .concept-body {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .concept-section {
+        padding: 1.5rem;
+    }
+
+    .concept-section h4 {
+        font-size: 1.25rem;
+    }
+
+    .concept-section p {
+        font-size: 1rem;
+    }
+
+    .prob-intro {
+        padding: 1.5rem;
+    }
+
+    .prob-intro h3 {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .prob-tabs-nav {
+        grid-template-columns: 1fr;
+    }
+}

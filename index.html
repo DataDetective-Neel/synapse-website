@@ -849,24 +849,152 @@
                         <h2><i class="fas fa-chart-pie"></i> Probability & Statistics</h2>
                         <span class="badge">Statistical Analysis</span>
                     </div>
-                    <div class="placeholder-card">
-                        <div class="placeholder-icon">
-                            <i class="fas fa-calculator"></i>
+
+                    <!-- Probability Concepts Overview -->
+                    <div class="prob-intro">
+                        <h3><i class="fas fa-lightbulb"></i> Probability Concepts Used in the Project</h3>
+                        <p>Explore the key probability distributions and theorems applied in our data analysis workflow.</p>
+                    </div>
+
+                    <!-- Nested Tabs for Probability Concepts -->
+                    <div class="prob-tabs-container">
+                        <div class="prob-tabs-nav">
+                            <button class="prob-tab-btn active" data-prob-tab="normal">
+                                <i class="fas fa-dice"></i>
+                                <span>Normal Distribution</span>
+                            </button>
+                            <button class="prob-tab-btn" data-prob-tab="poisson">
+                                <i class="fas fa-clock"></i>
+                                <span>Poisson Distribution</span>
+                            </button>
+                            <button class="prob-tab-btn" data-prob-tab="exponential">
+                                <i class="fas fa-wave-square"></i>
+                                <span>Exponential Distribution</span>
+                            </button>
+                            <button class="prob-tab-btn" data-prob-tab="conditional">
+                                <i class="fas fa-code-branch"></i>
+                                <span>Conditional Probability</span>
+                            </button>
+                            <button class="prob-tab-btn" data-prob-tab="bayes">
+                                <i class="fas fa-brain"></i>
+                                <span>Bayes' Theorem</span>
+                            </button>
                         </div>
-                        <h3>Coming Soon</h3>
-                        <p>Probability distributions and statistical analysis tools will be added in future updates.</p>
-                        <div class="feature-list">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Probability Distributions</span>
+
+                        <div class="prob-tabs-content">
+                            <!-- Normal Distribution -->
+                            <div class="prob-tab-panel active" id="normal">
+                                <div class="concept-card">
+                                    <div class="concept-header">
+                                        <div class="concept-icon">
+                                            <i class="fas fa-dice"></i>
+                                        </div>
+                                        <h3>Normal Distribution</h3>
+                                        <span class="concept-tag">Gaussian Distribution</span>
+                                    </div>
+                                    <div class="concept-body">
+                                        <div class="concept-section">
+                                            <h4><i class="fas fa-book"></i> Definition</h4>
+                                            <p>A normal distribution is also known as the Gaussian distribution. It describes a symmetrical curve where most values cluster around the mean with symmetric variation.</p>
+                                        </div>
+                                        <div class="concept-section">
+                                            <h4><i class="fas fa-bullseye"></i> Purpose</h4>
+                                            <p>Used to analyze natural variation in continuous data such as sales values, product dimensions, or manufacturing time.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Hypothesis Testing</span>
+
+                            <!-- Poisson Distribution -->
+                            <div class="prob-tab-panel" id="poisson">
+                                <div class="concept-card">
+                                    <div class="concept-header">
+                                        <div class="concept-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <h3>Poisson Distribution</h3>
+                                        <span class="concept-tag">Event Count Model</span>
+                                    </div>
+                                    <div class="concept-body">
+                                        <div class="concept-section">
+                                            <h4><i class="fas fa-book"></i> Definition</h4>
+                                            <p>A Poisson distribution models the probability of a number of events occurring within a fixed time or space interval. The Poisson distribution is defined by a single parameter, lambda, where lambda is greater than zero.</p>
+                                        </div>
+                                        <div class="concept-section">
+                                            <h4><i class="fas fa-bullseye"></i> Purpose</h4>
+                                            <p>Used to study the count of events such as number of daily orders, number of defects per batch, or machine breakdowns.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Statistical Inference</span>
+
+                            <!-- Exponential Distribution -->
+                            <div class="prob-tab-panel" id="exponential">
+                                <div class="concept-card">
+                                    <div class="concept-header">
+                                        <div class="concept-icon">
+                                            <i class="fas fa-wave-square"></i>
+                                        </div>
+                                        <h3>Exponential Distribution</h3>
+                                        <span class="concept-tag">Time Between Events</span>
+                                    </div>
+                                    <div class="concept-body">
+                                        <div class="concept-section">
+                                            <h4><i class="fas fa-book"></i> Definition</h4>
+                                            <p>An exponential distribution describes the time gap between consecutive events. It is defined by a single parameter, lambda, which is called the rate parameter.</p>
+                                        </div>
+                                        <div class="concept-section">
+                                            <h4><i class="fas fa-bullseye"></i> Purpose</h4>
+                                            <p>Helps analyze time between orders, customer arrivals, or time until machine failure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Conditional Probability -->
+                            <div class="prob-tab-panel" id="conditional">
+                                <div class="concept-card">
+                                    <div class="concept-header">
+                                        <div class="concept-icon">
+                                            <i class="fas fa-code-branch"></i>
+                                        </div>
+                                        <h3>Conditional Probability</h3>
+                                        <span class="concept-tag">Dependent Events</span>
+                                    </div>
+                                    <div class="concept-body">
+                                        <div class="concept-section">
+                                            <h4><i class="fas fa-book"></i> Definition</h4>
+                                            <p>Conditional probability measures the chance of an event occurring given that another event has already taken place.</p>
+                                        </div>
+                                        <div class="concept-section">
+                                            <h4><i class="fas fa-bullseye"></i> Purpose</h4>
+                                            <p>It helps in exploring the dependencies between variables (e.g. if marketing spend increases, what is the probability that sales will also increase?, Does Machine A produce more defects compared to Machine B?) to understand cause-effect relationships and uncover patterns that influence outcomes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bayes' Theorem -->
+                            <div class="prob-tab-panel" id="bayes">
+                                <div class="concept-card">
+                                    <div class="concept-header">
+                                        <div class="concept-icon">
+                                            <i class="fas fa-brain"></i>
+                                        </div>
+                                        <h3>Bayes' Theorem</h3>
+                                        <span class="concept-tag">Inverse Probability</span>
+                                    </div>
+                                    <div class="concept-body">
+                                        <div class="concept-section">
+                                            <h4><i class="fas fa-book"></i> Definition</h4>
+                                            <p>Bayes' theorem is a mathematical rule that helps us recalculate the probability of something by combining old information with new evidence, making predictions more accurate.</p>
+                                        </div>
+                                        <div class="concept-section">
+                                            <h4><i class="fas fa-bullseye"></i> Purpose</h4>
+                                            <p>Bayes' theorem helps update the probability of events when new data appears. It improves predictions like customer conversion chances or machine failure risk by combining old information with new evidence.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
