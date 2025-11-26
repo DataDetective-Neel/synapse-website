@@ -1269,6 +1269,30 @@ footer p {
     box-shadow: var(--shadow-premium);
 }
 
+.circuit-image-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-gold);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-deep);
+    text-align: center;
+}
+
+.circuit-diagram {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.circuit-diagram:hover {
+    transform: scale(1.02);
+}
+
 .circuit-btn i {
     font-size: 1rem;
 }
