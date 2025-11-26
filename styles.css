@@ -2672,3 +2672,196 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========================================
+   OOP SECTION STYLES
+   ======================================== */
+
+.oop-concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.oop-concept-card {
+    background: linear-gradient(165deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+    border: 1px solid var(--border-gold);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+    transition: all 0.3s ease;
+}
+
+.oop-concept-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow-gold);
+    border-color: var(--gold-light);
+}
+
+.oop-concept-header {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(156, 77, 204, 0.15));
+    padding: 2rem;
+    border-bottom: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.oop-icon {
+    font-size: 3rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
+}
+
+.oop-concept-header h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+.oop-concept-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.oop-section {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.oop-section:hover {
+    border-left-width: 6px;
+    transform: translateX(3px);
+    box-shadow: var(--shadow-premium);
+}
+
+.oop-section.highlight {
+    border-left-color: var(--purple-light);
+    background: linear-gradient(135deg, rgba(156, 77, 204, 0.05), var(--bg-tertiary));
+}
+
+.oop-section.benefit {
+    border-left-color: var(--success);
+    background: linear-gradient(135deg, rgba(0, 230, 118, 0.05), var(--bg-tertiary));
+}
+
+.oop-section h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+}
+
+.oop-section h4 i {
+    font-size: 1rem;
+}
+
+.oop-section p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.implementation-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.implementation-list li {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0.75rem 1rem;
+    background: var(--bg-card);
+    border-radius: 8px;
+    border-left: 3px solid var(--gold);
+    transition: all 0.3s ease;
+}
+
+.implementation-list li:hover {
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.1), var(--bg-card));
+    border-left-width: 5px;
+    transform: translateX(5px);
+}
+
+.implementation-list li strong {
+    color: var(--gold);
+    font-weight: 700;
+    margin-right: 0.25rem;
+}
+
+/* Responsive for OOP Section */
+@media (max-width: 1024px) {
+    .oop-concepts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .oop-concept-header {
+        padding: 1.5rem;
+    }
+
+    .oop-icon {
+        font-size: 2.5rem;
+    }
+
+    .oop-concept-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .oop-concept-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .oop-concept-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+    }
+
+    .oop-icon {
+        font-size: 2.25rem;
+    }
+
+    .oop-concept-header h3 {
+        font-size: 1.35rem;
+    }
+
+    .oop-section {
+        padding: 1.25rem;
+    }
+
+    .oop-section h4 {
+        font-size: 1rem;
+    }
+
+    .implementation-list li {
+        font-size: 0.9rem;
+        padding: 0.65rem 0.85rem;
+    }
+}

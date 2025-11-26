@@ -807,24 +807,132 @@
                         <h2><i class="fab fa-java"></i> Object-Oriented Programming</h2>
                         <span class="badge">Java Backend</span>
                     </div>
-                    <div class="placeholder-card">
-                        <div class="placeholder-icon">
-                            <i class="fas fa-code"></i>
+
+                    <!-- OOP Introduction -->
+                    <div class="prob-intro">
+                        <h3><i class="fas fa-cube"></i> OOP Concepts in Data Pipeline</h3>
+                        <p>Our data centralization system leverages core OOP principles to process 10,700 records across 4 datasets with clean, maintainable, and scalable architecture.</p>
+                    </div>
+
+                    <!-- OOP Concepts Grid -->
+                    <div class="oop-concepts-grid">
+                        <!-- Classes and Objects -->
+                        <div class="oop-concept-card">
+                            <div class="oop-concept-header">
+                                <div class="oop-icon">
+                                    <i class="fas fa-cubes"></i>
+                                </div>
+                                <h3>Classes & Objects</h3>
+                            </div>
+                            <div class="oop-concept-body">
+                                <div class="oop-section">
+                                    <h4><i class="fas fa-lightbulb"></i> Concept</h4>
+                                    <p>Classes serve as blueprints defining structure and behavior, while objects are instances created from these blueprints.</p>
+                                </div>
+                                <div class="oop-section highlight">
+                                    <h4><i class="fas fa-cogs"></i> Implementation</h4>
+                                    <p>Created four specialized classes to represent each dataset type:</p>
+                                    <ul class="implementation-list">
+                                        <li><strong>FieldReport</strong> - Properties: reportId, productId, serialNo, failureDate, location, failureMode, severity, reportedBy</li>
+                                        <li><strong>ManufacturingData</strong> - Properties: batchId, productId, productionDate, machineId, operatorId, producedQty, shift</li>
+                                        <li><strong>SalesRecord</strong> - Properties: orderId, productId, date, channel, qty, unitPrice, totalPrice</li>
+                                        <li><strong>TestingData</strong> - Properties: testId, batchId, testDate, testName, measurementValue, unit, thresholdMin, thresholdMax, status</li>
+                                    </ul>
+                                </div>
+                                <div class="oop-section benefit">
+                                    <h4><i class="fas fa-trophy"></i> Benefit</h4>
+                                    <p>Organized 10,700 records with type-safe data handling, ensuring each dataset maintains its unique structure while enabling consistent processing across all data types.</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Coming Soon</h3>
-                        <p>Java backend implementation and OOP concepts will be added in future updates.</p>
-                        <div class="feature-list">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Class Design & Architecture</span>
+
+                        <!-- Inheritance -->
+                        <div class="oop-concept-card">
+                            <div class="oop-concept-header">
+                                <div class="oop-icon">
+                                    <i class="fas fa-sitemap"></i>
+                                </div>
+                                <h3>Inheritance</h3>
                             </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Inheritance & Polymorphism</span>
+                            <div class="oop-concept-body">
+                                <div class="oop-section">
+                                    <h4><i class="fas fa-lightbulb"></i> Concept</h4>
+                                    <p>Inheritance allows child classes to acquire properties and methods from parent classes, promoting code reusability and establishing hierarchical relationships.</p>
+                                </div>
+                                <div class="oop-section highlight">
+                                    <h4><i class="fas fa-cogs"></i> Implementation</h4>
+                                    <p>Established a <strong>DataRecord</strong> base class with common attributes inherited by all dataset classes:</p>
+                                    <ul class="implementation-list">
+                                        <li><strong>Shared Properties:</strong> recordId, productId, timestamp (common across all 4 datasets)</li>
+                                        <li><strong>Field-Specific:</strong> Added failureMode, severity, location unique to FieldReport</li>
+                                        <li><strong>Manufacturing-Specific:</strong> Added machineId, operatorId, shift unique to ManufacturingData</li>
+                                        <li><strong>Sales-Specific:</strong> Added channel, unitPrice, totalPrice unique to SalesRecord</li>
+                                        <li><strong>Testing-Specific:</strong> Added measurementValue, thresholdMin, thresholdMax unique to TestingData</li>
+                                    </ul>
+                                </div>
+                                <div class="oop-section benefit">
+                                    <h4><i class="fas fa-trophy"></i> Benefit</h4>
+                                    <p>Eliminated code duplication by inheriting 3 common fields across 10,700 records. Centralized shared behavior while maintaining dataset-specific functionality, reducing maintenance overhead.</p>
+                                </div>
                             </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Design Patterns</span>
+                        </div>
+
+                        <!-- Polymorphism -->
+                        <div class="oop-concept-card">
+                            <div class="oop-concept-header">
+                                <div class="oop-icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <h3>Polymorphism</h3>
+                            </div>
+                            <div class="oop-concept-body">
+                                <div class="oop-section">
+                                    <h4><i class="fas fa-lightbulb"></i> Concept</h4>
+                                    <p>Polymorphism enables objects of different classes to be treated uniformly through a common interface, with each class providing its own implementation of shared methods.</p>
+                                </div>
+                                <div class="oop-section highlight">
+                                    <h4><i class="fas fa-cogs"></i> Implementation</h4>
+                                    <p>Implemented uniform processing methods with dataset-specific behavior:</p>
+                                    <ul class="implementation-list">
+                                        <li><strong>validate()</strong> - FieldReport validates failureMode against known failure types, ManufacturingData validates producedQty ranges, SalesRecord validates unitPrice is positive, TestingData validates measurementValue against thresholdMin/Max</li>
+                                        <li><strong>cleanData()</strong> - Different cleaning logic for each: Field removes invalid locations, Manufacturing normalizes shift values, Sales formats currency, Testing handles missing units</li>
+                                        <li><strong>exportToCSV()</strong> - Each class formats its specific columns for output while maintaining consistent CSV structure</li>
+                                    </ul>
+                                </div>
+                                <div class="oop-section benefit">
+                                    <h4><i class="fas fa-trophy"></i> Benefit</h4>
+                                    <p>Processed all 4 datasets (2,300 Field + 2,500 Manufacturing + 2,700 Sales + 3,200 Testing records) through unified pipeline. Single processing loop handles different data types without type-checking logic.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Abstraction -->
+                        <div class="oop-concept-card">
+                            <div class="oop-concept-header">
+                                <div class="oop-icon">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <h3>Abstraction</h3>
+                            </div>
+                            <div class="oop-concept-body">
+                                <div class="oop-section">
+                                    <h4><i class="fas fa-lightbulb"></i> Concept</h4>
+                                    <p>Abstraction hides complex implementation details and exposes only essential features, defining what operations must be performed without specifying how.</p>
+                                </div>
+                                <div class="oop-section highlight">
+                                    <h4><i class="fas fa-cogs"></i> Implementation</h4>
+                                    <p>Designed abstract <strong>DataProcessor</strong> class defining the ETL pipeline contract:</p>
+                                    <ul class="implementation-list">
+                                        <li><strong>readData()</strong> - Abstract method implemented by CSVReader for file-based sources, DatabaseReader for SQL sources</li>
+                                        <li><strong>cleanData()</strong> - Abstract method with implementations handling null removal, format standardization, duplicate detection</li>
+                                        <li><strong>validateData()</strong> - Abstract method ensuring each dataset meets its quality criteria (completeness, validity, consistency)</li>
+                                        <li><strong>exportData()</strong> - Abstract method supporting CSV, JSON, and database export formats</li>
+                                    </ul>
+                                </div>
+                                <div class="oop-section benefit">
+                                    <h4><i class="fas fa-trophy"></i> Benefit</h4>
+                                    <p>Established consistent pipeline contract across all datasets. Achieved 100% data completeness and quality score by enforcing validation at abstract level, while allowing flexible implementation per dataset type.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
