@@ -433,34 +433,81 @@
                         </div>
 
                         <div class="analytics-insights-panel">
-                            <h3><i class="fas fa-lightbulb"></i> Key Findings</h3>
+                            <h3><i class="fas fa-lightbulb"></i> Exploratory Data Analysis - Key Findings</h3>
                             <div class="insight-item">
-                                <i class="fas fa-check-circle"></i>
-                                Processed 10,700 records across 4 datasets
+                                <i class="fas fa-chart-line"></i>
+                                Field failures remain stable at 60-95 per month showing consistent reliability with no extreme spikes
                             </div>
                             <div class="insight-item">
-                                <i class="fas fa-check-circle"></i>
-                                Maintained 10,700 clean records with zero data loss
+                                <i class="fas fa-tools"></i>
+                                Pad wear is the most frequent failure mode, indicating scope for better material selection
                             </div>
                             <div class="insight-item">
-                                <i class="fas fa-check-circle"></i>
-                                All datasets achieved 100% data completeness after cleaning
+                                <i class="fas fa-industry"></i>
+                                Production stays steady between 16,000–23,000 units per month without quality compromise
                             </div>
                             <div class="insight-item">
-                                <i class="fas fa-check-circle"></i>
-                                All missing values successfully handled across all datasets
+                                <i class="fas fa-flask"></i>
+                                Testing shows 82.4% pass rate with opportunities to reduce batch inconsistencies
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                Sales revenue stable across periods with total revenue of $183.7M from 2,700 orders
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-shield-check"></i>
+                                No correlation between production surges and quality issues - manufacturing process is robust
                             </div>
                         </div>
 
                         <div class="analytics-viz-card">
-                            <h3><i class="fas fa-chart-bar"></i> Data Quality Overview</h3>
-                            <img src="visualizations/quality_dashboard.png" alt="Quality Dashboard" class="viz-image">
+                            <h3><i class="fas fa-chart-line"></i> Comprehensive Data Distribution Analysis</h3>
+                            <img src="visualizations/eda_images/data_distribution_analysis.png" alt="Data Distribution Analysis" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+                                Comprehensive visualization showing the distribution patterns across all key metrics including severity levels, 
+                                production quantities, quality measurements, and temporal patterns. This multi-panel analysis reveals the 
+                                underlying data characteristics and helps identify outliers and trends.
+                            </p>
                         </div>
 
                         <div class="analytics-viz-card">
-                            <h3><i class="fas fa-project-diagram"></i> Comprehensive Summary</h3>
-                            <img src="visualizations/comprehensive_summary.png" alt="Comprehensive Summary"
-                                class="viz-image">
+                            <h3><i class="fas fa-project-diagram"></i> Correlation and Relationship Analysis</h3>
+                            <img src="visualizations/eda_images/correlation_matrix.png" alt="Correlation Analysis" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+                                Statistical correlation analysis identifying relationships between manufacturing variables, quality metrics, 
+                                and field performance. Strong correlations indicate predictive relationships while weak correlations suggest 
+                                independent factors requiring separate optimization strategies.
+                            </p>
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-chart-bar"></i> Categorical Distribution and Frequency Analysis</h3>
+                            <img src="visualizations/eda_images/categorical_distribution.png" alt="Categorical Analysis" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+                                Breakdown of categorical variables showing distribution across failure modes, test types, production shifts, 
+                                and sales channels. This analysis reveals operational patterns and highlights areas requiring focused attention 
+                                for process improvements and resource allocation.
+                            </p>
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-chart-pie"></i> Time Series and Temporal Trends</h3>
+                            <img src="visualizations/eda_images/temporal_trends.png" alt="Temporal Analysis" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+                                Temporal analysis tracking key performance indicators over time, revealing seasonal patterns, growth trends, 
+                                and cyclic behaviors. Helps identify peak periods, predict future demands, and optimize inventory and 
+                                production planning strategies.
+                            </p>
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-th"></i> Box Plot Analysis - Outlier Detection</h3>
+                            <img src="visualizations/eda_images/box_plot_outliers.png" alt="Box Plot Analysis" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+                                Box plot visualization identifying outliers and variance in key numeric variables. The quartile-based approach 
+                                highlights data spread, median values, and extreme values that may require special investigation or represent 
+                                exceptional cases in production, testing, or field operations.
+                            </p>
                         </div>
                     </div>
 
@@ -477,9 +524,9 @@
                                 <div class="metric-label">Total Reports</div>
                             </div>
                             <div class="analytics-metric-card">
-                                <div class="metric-icon"><i class="fas fa-check"></i></div>
-                                <div class="metric-value">100%</div>
-                                <div class="metric-label">Data Quality</div>
+                                <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+                                <div class="metric-value">60-95</div>
+                                <div class="metric-label">Monthly Failures</div>
                             </div>
                             <div class="analytics-metric-card">
                                 <div class="metric-icon"><i class="fas fa-exclamation-triangle"></i></div>
@@ -487,31 +534,46 @@
                                 <div class="metric-label">Failure Types</div>
                             </div>
                             <div class="analytics-metric-card">
-                                <div class="metric-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                <div class="metric-value">16</div>
-                                <div class="metric-label">Locations</div>
+                                <div class="metric-icon"><i class="fas fa-shield-alt"></i></div>
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Data Quality</div>
                             </div>
                         </div>
 
                         <div class="analytics-insights-panel">
-                            <h3><i class="fas fa-lightbulb"></i> Field Reports Insights</h3>
+                            <h3><i class="fas fa-lightbulb"></i> Key Insights</h3>
                             <div class="insight-item">
-                                <i class="fas fa-star"></i>
-                                Excellent data quality after cleaning
+                                <i class="fas fa-chart-line"></i>
+                                Failures remain consistent between 60–95 per month, showing stable field reliability
                             </div>
                             <div class="insight-item">
-                                <i class="fas fa-star"></i>
-                                Most common failure mode: pad_wear (573 occurrences)
+                                <i class="fas fa-tools"></i>
+                                Pad wear is the most frequent failure mode, indicating scope for better material selection
                             </div>
                             <div class="insight-item">
-                                <i class="fas fa-star"></i>
-                                Geographic hotspot: Hyderabad (339 reports)
+                                <i class="fas fa-cogs"></i>
+                                Most failures are wear-related (pad wear, sensor failure, leakage, brake shim wear, noise/vibration)
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-lightbulb"></i>
+                                No extreme spikes observed - issues are not seasonal or sudden
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-wrench"></i>
+                                Opportunities for improved manufacturing tolerances and process optimization in assembly
                             </div>
                         </div>
 
                         <div class="analytics-viz-card">
-                            <h3><i class="fas fa-chart-area"></i> Detailed Field Analysis</h3>
-                            <img src="visualizations/field_analysis.png" alt="Field Analysis" class="viz-image">
+                            <h3><i class="fas fa-chart-line"></i> Field Failure Temporal Analysis</h3>
+                            <img src="visualizations/eda_images/temporal_trends.png" alt="Field Failure Trends" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Failures remain consistent between 60–95 per month, showing stable field reliability with no extreme spikes. The temporal analysis reveals that issues are not seasonal or sudden, indicating consistent product performance across different time periods.</p>
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-chart-bar"></i> Failure Mode Distribution Analysis</h3>
+                            <img src="visualizations/eda_images/categorical_distribution.png" alt="Failure Mode Distribution" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Pad wear is the most frequent failure mode (573 occurrences), followed by sensor failure (360), leakage (349), brake shim wear (344), overheating (343), and noise/vibration. Most failures are wear-related, indicating scope for better material selection and improved manufacturing tolerances.</p>
                         </div>
                     </div>
 
@@ -528,9 +590,9 @@
                                 <div class="metric-label">Production Batches</div>
                             </div>
                             <div class="analytics-metric-card">
-                                <div class="metric-icon"><i class="fas fa-cogs"></i></div>
-                                <div class="metric-value">250</div>
-                                <div class="metric-label">Avg Production Qty</div>
+                                <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+                                <div class="metric-value">16K-23K</div>
+                                <div class="metric-label">Monthly Units</div>
                             </div>
                             <div class="analytics-metric-card">
                                 <div class="metric-icon"><i class="fas fa-clock"></i></div>
@@ -538,28 +600,36 @@
                                 <div class="metric-label">Shifts</div>
                             </div>
                             <div class="analytics-metric-card">
-                                <div class="metric-icon"><i class="fas fa-users"></i></div>
-                                <div class="metric-value">40</div>
-                                <div class="metric-label">Operators</div>
+                                <div class="metric-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Data Quality</div>
                             </div>
                         </div>
 
                         <div class="analytics-insights-panel">
-                            <h3><i class="fas fa-lightbulb"></i> Manufacturing Insights</h3>
+                            <h3><i class="fas fa-lightbulb"></i> Key Insights</h3>
                             <div class="insight-item">
                                 <i class="fas fa-chart-line"></i>
-                                Average production quantity: 250 units per batch
+                                Production stays between 16,000–23,000 units per month showing steady demand and capacity utilization
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                Sudden peaks suggest large orders, seasonal production planning, or better machine availability
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-shield-check"></i>
+                                No link between higher production and higher failures - production surges do not compromise quality
                             </div>
                             <div class="insight-item">
                                 <i class="fas fa-clock"></i>
-                                Morning shift has highest production volume (991 batches)
+                                Morning shift maintains highest production volume with 991 batches
                             </div>
                         </div>
 
                         <div class="analytics-viz-card">
-                            <h3><i class="fas fa-chart-area"></i> Detailed Manufacturing Analysis</h3>
-                            <img src="visualizations/manufacturing_analysis.png" alt="Manufacturing Analysis"
-                                class="viz-image">
+                            <h3><i class="fas fa-chart-area"></i> Production Distribution and Patterns</h3>
+                            <img src="visualizations/eda_images/data_distribution_analysis.png" alt="Production Distribution" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Production stays between 16,000–23,000 units per month showing steady demand and capacity utilization. Average production quantity is 250 units per batch. Sudden peaks suggest large orders, seasonal production planning, or better machine availability. No link between higher production and higher failures - production surges do not compromise quality.</p>
                         </div>
                     </div>
 
@@ -577,36 +647,51 @@
                             </div>
                             <div class="analytics-metric-card">
                                 <div class="metric-icon"><i class="fas fa-dollar-sign"></i></div>
-                                <div class="metric-value">$2,655</div>
-                                <div class="metric-label">Avg Unit Price</div>
-                            </div>
-                            <div class="analytics-metric-card">
-                                <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
-                                <div class="metric-value">$68,044</div>
-                                <div class="metric-label">Avg Order Value</div>
+                                <div class="metric-value">$183.7M</div>
+                                <div class="metric-label">Total Revenue</div>
                             </div>
                             <div class="analytics-metric-card">
                                 <div class="metric-icon"><i class="fas fa-store"></i></div>
                                 <div class="metric-value">3</div>
                                 <div class="metric-label">Sales Channels</div>
                             </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Data Quality</div>
+                            </div>
                         </div>
 
                         <div class="analytics-insights-panel">
-                            <h3><i class="fas fa-lightbulb"></i> Sales Insights</h3>
+                            <h3><i class="fas fa-lightbulb"></i> Key Insights</h3>
                             <div class="insight-item">
-                                <i class="fas fa-trophy"></i>
-                                Total revenue: ~$183.7 million
+                                <i class="fas fa-chart-line"></i>
+                                Revenue stays fairly stable across months with occasional increases
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Large revenue spike at the end indicates a bulk institutional order or possible data entry anomaly
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-chart-pie"></i>
+                                Revenue trend helps monitor business growth and detect unusual sales behaviors
                             </div>
                             <div class="insight-item">
                                 <i class="fas fa-store"></i>
-                                Primary sales channel: dealer (1,404 orders - 52%)
+                                Primary sales channel: dealer accounts for 52% of orders (1,404 orders)
                             </div>
                         </div>
 
                         <div class="analytics-viz-card">
-                            <h3><i class="fas fa-chart-area"></i> Detailed Sales Analysis</h3>
-                            <img src="visualizations/sales_analysis.png" alt="Sales Analysis" class="viz-image">
+                            <h3><i class="fas fa-chart-line"></i> Sales Revenue Trends and Patterns</h3>
+                            <img src="visualizations/eda_images/temporal_trends.png" alt="Sales Revenue Trends" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Revenue stays fairly stable across months with occasional increases, totaling $183.7M from 2,700 orders. A very large spike at the end indicates either a bulk institutional order or possible data entry anomaly that needs verification. This revenue trend helps monitor business growth and detect unusual sales behaviors. Average unit price is $2,655 with average order value of $68,044.</p>
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-project-diagram"></i> Sales Correlation Analysis</h3>
+                            <img src="visualizations/eda_images/correlation_matrix.png" alt="Sales Correlation Matrix" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Statistical correlation analysis showing relationships between sales quantity, unit price, total price, and sales channels. Strong positive correlations between quantity and total revenue help identify key revenue drivers and optimize pricing strategies across the three sales channels (dealer, online, wholesale).</p>
                         </div>
                     </div>
 
@@ -628,9 +713,9 @@
                                 <div class="metric-label">Pass Rate</div>
                             </div>
                             <div class="analytics-metric-card">
-                                <div class="metric-icon"><i class="fas fa-clipboard-check"></i></div>
-                                <div class="metric-value">5</div>
-                                <div class="metric-label">Test Types</div>
+                                <div class="metric-icon"><i class="fas fa-times-circle"></i></div>
+                                <div class="metric-value">17-20%</div>
+                                <div class="metric-label">Failure Rate</div>
                             </div>
                             <div class="analytics-metric-card">
                                 <div class="metric-icon"><i class="fas fa-star"></i></div>
@@ -640,20 +725,39 @@
                         </div>
 
                         <div class="analytics-insights-panel">
-                            <h3><i class="fas fa-lightbulb"></i> Testing Insights</h3>
+                            <h3><i class="fas fa-lightbulb"></i> Key Insights</h3>
                             <div class="insight-item">
-                                <i class="fas fa-percentage"></i>
-                                Test pass rate: 82.4% (2,637 passed out of 3,200)
+                                <i class="fas fa-check-circle"></i>
+                                Most batches PASS testing, indicating overall good process control
                             </div>
                             <div class="insight-item">
-                                <i class="fas fa-check-double"></i>
-                                All missing values successfully handled
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Around 17–20% FAIL rate is moderate and signals potential batch inconsistencies
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-tools"></i>
+                                Failures may stem from variation in raw materials or operator performance
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                Test failures must be monitored closely as they lead to rework, increased cost, and potential field failures
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-chart-bar"></i>
+                                Test pass rate: 82.4% with 2,637 passed out of 3,200 total tests
                             </div>
                         </div>
 
                         <div class="analytics-viz-card">
-                            <h3><i class="fas fa-chart-area"></i> Detailed Testing Analysis</h3>
-                            <img src="visualizations/testing_analysis.png" alt="Testing Analysis" class="viz-image">
+                            <h3><i class="fas fa-chart-pie"></i> Testing Status Distribution</h3>
+                            <img src="visualizations/eda_images/categorical_distribution.png" alt="Testing Status Distribution" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Test pass rate is 82.4% (2,637 passed out of 3,200 tests), indicating overall good process control. Around 17.6% failure rate is moderate and signals potential batch inconsistencies. Five test types are conducted: impact, hardness, tensile, leakage, and fatigue testing. Failures may stem from variation in raw materials or operator performance.</p>
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-th"></i> Testing Measurement Outlier Analysis</h3>
+                            <img src="visualizations/eda_images/box_plot_outliers.png" alt="Testing Outliers" class="viz-image">
+                            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Box plot analysis revealing outliers and variance in test measurements across all test types. The quartile-based approach highlights data spread, median values, and extreme values requiring investigation. Test failures must be monitored closely as they lead to rework, increased costs, and potential field failures.</p>
                         </div>
                     </div>
 
